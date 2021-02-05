@@ -45,10 +45,10 @@ app.use("/", subscribeRoutes);
 app.use("/", userRoutes);
 
 let PORT = process.env.PORT;
-if (port == null || port == "") {
-    port = 8000;
+if (PORT == null || PORT == "") {
+    PORT = 8000;
 }
-app.listen(port);
+app.listen(PORT);
 
 app.listen(PORT, () => {
     console.log(`Example app listening at http://localhost: ${PORT}`)

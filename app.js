@@ -44,7 +44,7 @@ app.use("/", showRoutes);
 app.use("/", subscribeRoutes);
 app.use("/", userRoutes);
 
-let PORT = process.env.PORT;
+let PORT = process.env.PORT || 8000;
 if (PORT == null || PORT == "") {
     PORT = 8000;
 }

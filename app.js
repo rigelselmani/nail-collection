@@ -13,7 +13,7 @@ showRoutes = require("./routes/showRoutes"),
     User = require("./models/User");
 require("dotenv").config();
 
-mongoose.connect(process.env.DATABASE, { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true, useFindAndModify: false }).then(res => {
+mongoose.connect(process.env.DATABASE || "mongodb://localhost:27017/nail", { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true, useFindAndModify: false }).then(res => {
     console.log("DB Connected!")
 }).catch(err => {
     console.log(Error, err.message);

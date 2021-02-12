@@ -4,8 +4,8 @@ const express = require("express"),
     methodOverride = require("method-override"),
     mongoose = require("mongoose"),
     session = require("express-session"),
-    flash = require("connect-flash")
-showRoutes = require("./routes/showRoutes"),
+    flash = require("connect-flash"),
+    showRoutes = require("./routes/showRoutes"),
     subscribeRoutes = require("./routes/subscribeRoute"),
     userRoutes = require("./routes/userRoutes"),
     passport = require("passport"),
@@ -44,7 +44,7 @@ app.use("/", showRoutes);
 app.use("/", subscribeRoutes);
 app.use("/", userRoutes);
 
-let PORT = process.env.PORT || 3000;
+let PORT = process.env.PORT || 8000;
 
 app.listen(PORT, () => {
     console.log(`Example app listening at http://localhost: ${PORT}`)

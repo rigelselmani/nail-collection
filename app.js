@@ -13,7 +13,7 @@ const express = require("express"),
     User = require("./models/User");
 require("dotenv").config();
 
-mongoose.connect(process.env.DATABASE || "mongodb://localhost:27017/nail", { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true, useFindAndModify: false }).then(res => {
+mongoose.connect(process.env.DATABASE , { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true, useFindAndModify: false }).then(res => {
     console.log("DB Connected!")
 }).catch(err => {
     console.log(Error, err.message);
@@ -44,7 +44,7 @@ app.use("/", showRoutes);
 app.use("/", subscribeRoutes);
 app.use("/", userRoutes);
 
-let PORT = process.env.PORT || 8000;
+let PORT = 8000;
 
 app.listen(PORT, () => {
     console.log(`Example app listening at http://localhost: ${PORT}`)

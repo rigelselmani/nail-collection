@@ -22,7 +22,7 @@ mongoose.connect(process.env.DATABASE , { useNewUrlParser: true, useUnifiedTopol
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(methodOverride("_method"))
-app.use(session({ resave: true, saveUninitialized: true, secret: 'notagoodsecret' }))
+app.use(session({ resave: false, saveUninitialized: true, secret: 'secret' }))
 app.use(flash());
 
 app.use(passport.initialize());

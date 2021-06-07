@@ -1,1 +1,1 @@
-# nail-collection
+# collection
